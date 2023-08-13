@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #asd{
+            background-color: rgb(243, 246, 246);
+        }
+    </style>
+</head>
+<body>
+    <div id="asd">
+        <h1 id="h11">Color</h1>
+        <div>
+            <h3 id="h31">#ffffff</h3>
+        </div>
+        <button type="button" id="btn" >click me</button>
+    </div>
+
+    <script>
+        let color=document.getElementById("h11")
+        let chan=document.getElementById("h31")
+        let btn=document.getElementById("btn")
+        let arr=[1,2,3,4,5,6,7,8,9,0,'A','B','C','D','E','F'];
+
+        btn.addEventListener("click",ashwin)
+        function ashwin()
+        {
+            let hex="#"
+            for(i=0;i<6;i++)
+            {
+                hex+=raja()
+            }
+            color.style.backgroundColor=hex  
+            chan.innerHTML=hex
+        }
+        
+        function raja()
+        {
+              let as=Math.floor(Math.random()*16)
+              return arr[as];  
+        }
+
+    </script>
+</body>
+</html>

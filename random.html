@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css" type="text/css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div id="form">
+        <h2 id="form1">sentence count</h2>
+        <div>
+            <textarea id="input" type="text" placeholder="text" cols="30" rows="10"></textarea>
+        </div>
+        
+        <div>
+           <button id="btn" type="submit" onclick="connect()">submit</button>
+        </div>
+        <div id="result">
+              <p>number</p>
+        </div>
+    </div>
+
+    <script>             
+         function connect()
+         {
+            let as=document.getElementById("input").value
+            let v=as.length
+            let asd=0;
+            for(i=0;i<v;i++)
+            {
+                if(as[i]===" ")
+                {
+                    asd++;
+                }
+            }
+            let e=document.getElementById("result")
+            e.innerHTML=asd+1;
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+</head>
+<body>
+<h1 id="ash">00</h1>
+<h1 id="ash1">00</h1>
+<h1 id="ash2">00</h1>
+
+    <script>
+        function date()
+        {
+        let datetime=new Date();
+        let hh=datetime.getHours();
+        let mm=datetime.getMinutes();
+        let ss=datetime.getSeconds();
+        document.getElementById("ash").innerHTML=hh;
+        document.getElementById("ash1").innerHTML=mm;
+        document.getElementById("ash2").innerHTML=ss;
+        }
+        setInterval(date,500);
+    </script>
+</body>
+</html>

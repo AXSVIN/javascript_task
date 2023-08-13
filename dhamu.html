@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body{
+            margin: 0px;
+            background-color: aqua;
+        }
+        #from{
+            
+            
+            background-color: rgb(25, 201, 31);
+            height: 500px;
+            width: 500px;
+            margin-left: 50px;
+            margin-top: 150px;
+            border-radius: 8px; 
+        }
+        h1{
+            color: aliceblue;
+            text-align: center;
+            padding-bottom: 0px;
+        }
+
+        textarea{
+              background-color: rgb(122, 122, 131);
+              border-radius: 10px;
+              color: #fef9f9;
+              display: flex;
+              
+
+        }
+        #btn{
+            margin-left: 120px;
+            border-radius: 10px;
+        }
+        #www{
+         margin-left: 120px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div id="from">
+       <h1>type sentence </h1>
+       <label id="www">about us</label><br>
+       <textarea id="qq" cols="30" rows="10"></textarea>
+       <div id="btn">
+          <button type="submit" onclick="ashwin()" >submit</button>
+       </div>
+    <div id="pp">
+    </div>
+    </div>
+
+<script>
+    function ashwin()
+    {
+       let a=document.getElementById("qq").value;
+       let b=a.length;
+       let c=0;
+       for(i=0;i<b;i++)
+       {
+        if(a[i]===" ")
+        {666
+            c++;
+        }
+        
+       }
+       let d=document.getElementById("pp")
+       d.innerHTML=c+1;
+    }
+</script>
+
+
+</body>
+</html>

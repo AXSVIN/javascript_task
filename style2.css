@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .filter label {
+    color: #fff;
+    margin-right: 0.5rem;
+  }
+  
+  .filter select {
+    padding: 0.5rem;
+  }
+  
+  .products {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .product {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 767px) {
+    .filter {
+      margin-top: 1rem;
+    }
+  
+    .products {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  
+    .product {
+      margin: 0.5rem 0;
+    }
+  }
+  

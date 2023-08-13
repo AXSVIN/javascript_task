@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <style>
+        body{
+            margin: 0px;
+            background-color: rgb(255, 255, 255);
+            background-color: black;
+        }
+        #box{
+            display: flex;
+            justify-content: center;
+            margin: 250px;
+            background-color: aqua;
+            width:20vw ;
+            height: 6vh;
+            color: aliceblue;
+            background-color: black;
+        }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid  text-white ">
+        <h2 id="h2">DIGITAL CLOCK</h2>
+    </div>
+    <div class="rows">
+         <div class="container ">
+             <div id="box">
+                 <h1><span id="hrs">00</span><h6><span id="hrs1">hrs</span></h6></h1>
+                 <h1>:</h1>
+                 <h1><span id="min">00</span><h6><span id="hrs1">mins</span></h6></h1>
+                 <h1>:</h1>
+                 <h1><span id="sec">00</span><h6><span id="hrs1">sec</span></h6></h1>
+             </div>
+         </div>
+    </div>
+    <script>
+        function ditTime()
+        {
+            let datetime=new Date()
+            let hr=datetime.getHours();
+            let min=datetime.getMinutes();
+            let sec=datetime.getSeconds();
+            if(hr>12)
+            {
+                hr=hr-12;
+            }
+            if(sec<10)
+            {
+                sec="0"+sec
+            }
+            if(hr<10)
+            {
+                hr="0"+hr
+            }
+
+            if(min<10)
+            {
+               min="0"+min
+            }
+            document.getElementById("hrs").innerHTML=hr;
+            document.getElementById("min").innerHTML=min;
+            document.getElementById("sec").innerHTML=sec;
+        }
+        setInterval(ditTime,500);
+    </script>
+  </body>
+</html>
